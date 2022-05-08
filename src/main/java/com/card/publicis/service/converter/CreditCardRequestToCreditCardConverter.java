@@ -1,7 +1,7 @@
-package com.card.service.converter;
+package com.card.publicis.service.converter;
 
-import com.card.dto.CreditCardRequest;
-import com.card.model.CreditCard;
+import com.card.publicis.dto.CreditCardRequest;
+import com.card.publicis.model.CreditCard;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;

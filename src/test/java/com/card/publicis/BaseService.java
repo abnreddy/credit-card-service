@@ -1,7 +1,7 @@
-package com.card;
+package com.card.publicis;
 
-import com.card.dto.CreditCardRequest;
-import com.card.model.CreditCard;
+import com.card.publicis.dto.CreditCardRequest;
+import com.card.publicis.model.CreditCard;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

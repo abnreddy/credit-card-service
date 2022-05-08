@@ -1,9 +1,10 @@
-package com.card.service;
+package com.card.publicis.service;
 
-import com.card.dto.CreditCardRequest;
-import com.card.model.CreditCard;
-import com.card.repository.CreditCardRepository;
-import com.card.service.converter.CreditCardRequestToCreditCardConverter;
+import com.card.publicis.dto.CreditCardRequest;
+import com.card.publicis.dto.CreditCardResponse;
+import com.card.publicis.model.CreditCard;
+import com.card.publicis.repository.CreditCardRepository;
+import com.card.publicis.service.converter.CreditCardRequestToCreditCardConverter;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,11 +20,13 @@ public class CreditCardService {
         this.converter = converter;
     }
 
-    public Long add(CreditCardRequest creditCardRequest) {
+    public CreditCardResponse add(CreditCardRequest creditCardRequest) {
 
         CreditCard creditCard = converter.apply(creditCardRequest);
         creditCardRepository.save(creditCard);
-        return creditCard.getCardNumber();
+        return CreditCardResponse.builder()
+                .cardNumber(creditCard.getCardNumber())
+                .build();
     }
 
     public List<CreditCard> retrieveAll() {

@@ -1,9 +1,10 @@
-package com.card.service;
+package com.card.publicis.service;
 
-import com.card.BaseService;
-import com.card.model.CreditCard;
-import com.card.repository.CreditCardRepository;
-import com.card.service.converter.CreditCardRequestToCreditCardConverter;
+import com.card.publicis.dto.CreditCardResponse;
+import com.card.publicis.model.CreditCard;
+import com.card.publicis.repository.CreditCardRepository;
+import com.card.publicis.service.converter.CreditCardRequestToCreditCardConverter;
+import com.card.publicis.BaseService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -29,8 +30,8 @@ class CreditCardServiceTest extends BaseService  {
     void addTest(){
         Mockito.when(converter.apply(creditCardRequest)).thenReturn(creditCard);
         Mockito.when(creditCardRepository.save(creditCard)).thenReturn(creditCard);
-        Long actual = creditCardService.add(creditCardRequest);
-        Assertions.assertEquals(12345L, actual);
+        CreditCardResponse actual = creditCardService.add(creditCardRequest);
+        Assertions.assertEquals(12345L, actual.getCardNumber());
     }
 
     @Test

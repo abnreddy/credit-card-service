@@ -1,4 +1,4 @@
-package com.card;
+package com.card.publicis;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

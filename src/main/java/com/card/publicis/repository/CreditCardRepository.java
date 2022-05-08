@@ -1,6 +1,6 @@
-package com.card.repository;
+package com.card.publicis.repository;
 
-import com.card.model.CreditCard;
+import com.card.publicis.model.CreditCard;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

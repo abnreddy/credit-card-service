@@ -1,4 +1,4 @@
-package com.card.dto;
+package com.card.publicis.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;

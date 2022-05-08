@@ -1,4 +1,4 @@
-package com.card.model;
+package com.card.publicis.model;
 
 import lombok.*;
 
